@@ -9,6 +9,7 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "airtable": "^0.11.0",
     "bootstrap": "^4.6.0",
     "gsap": "npm:@gsap/member@^3.6.1",
     "history": "^5.0.0",
@@ -21,6 +22,8 @@
     "react-redux": "^7.2.4",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "react-scroll": "^1.8.2",
+    "react-scroll-to-component": "^1.0.2",
     "react-scroll-trigger": "^0.6.10",
     "react-spring": "^9.1.2",
     "react-tooltip": "^4.2.18",
@@ -28,6 +31,7 @@
     "redux-promise": "^0.6.0",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^2.0.3",
+    "use-airtable": "^1.0.4",
     "web-vitals": "^1.0.1"
   },
   "scripts": {

@@ -9,12 +9,10 @@ import { logger } from 'redux-logger';
 import reduxPromise from 'redux-promise';
 
 
-import datasReducer from './reducers/index.js';
 import toolsReducer from './reducers/toolbox.js';
 
 
 const reducers = combineReducers({
-  datas: datasReducer,
   tools: toolsReducer
 });
 

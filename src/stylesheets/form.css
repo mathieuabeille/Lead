@@ -1,0 +1,138 @@
+.formbox{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.question{
+  width: 33%;
+}
+
+.illustrations{
+  width: 33%;
+}
+
+
+.illustration{
+  width: 75%;
+}
+
+.choices {
+}
+
+.choice {
+  padding: 14px 38px;
+  box-shadow: 1px 2px 2px rgba(25%, 24%, 34%, 0.1);
+  margin: 0 0 15px 0;
+  border-radius: 5px;
+  animation: pop-in 0.25s;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.choice:hover {
+  color: #2388FF;
+  animation: pop-in 0.25s;
+}
+
+.arrow{
+  background: #F7FAFD;
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+}
+
+.arrow-button{
+  background: #F7FAFD;
+  height: 1.2rem;
+  border-radius: 50%;
+  margin-left: 1rem;
+}
+
+
+.input {
+  border-radius: 5px;
+  height: 3.5rem;
+  font-size: 2.8rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  border: 1px solid #E7E7E7;
+  text-align: center;
+  color: #2388FF;
+  position: relative;
+  width: 300px;
+  margin: auto;
+
+}
+
+.input:focus{
+      outline-width: 0;
+
+}
+
+.input-box{
+  border: none;
+  height: 3.5rem;
+  font-size: 2.8rem;
+  text-align: center;
+  color: #2388FF;
+  width: 95%;
+  height: 95%;
+}
+
+.input-box:focus{
+      outline-width: 0;
+
+}
+.euro {
+  position: absolute;
+  top: 0.1rem;
+  bottom: 8px;
+  right: 0.4rem;
+  z-index: 1000;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.btn-flat .inactive {
+  opacity: 0.3;
+  color: white;
+  font-weight: 600;
+  padding: 1rem 2.5rem;
+  border-radius: 4px;
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  border: none;
+  background: #2388FF;
+  transition: background 0.3s ease;
+}
+
+
+
+.btn-flat {
+  opacity: 1;
+  color: white;
+  font-weight: 600;
+  padding: 1rem 2.5rem;
+  border-radius: 4px;
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  border: none;
+  background: #2388FF;
+  transition: background 0.3s ease;
+}
+
+.btn-flat:disabled {
+  opacity: 0.2;
+}
