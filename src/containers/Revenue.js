@@ -15,8 +15,11 @@ class Revenue extends Component {
     }
     mySubmitHandler = (event) => {
         event.preventDefault();
-        // alert("You are submitting " + this.state.amount);
-        scroll.scrollToBottom();
+        scroll.scrollMore(700, {
+            delay: 100,
+            smooth: true,
+            ignoreCancelEvents: true,
+        });
     }
     myChangeHandler = (event) => {
         this.setState({ amount: event.target.value });
