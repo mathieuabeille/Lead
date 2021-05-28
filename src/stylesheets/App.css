@@ -2,8 +2,9 @@
     text-align: center;
     background-color: white;
     width: 100vw;
-    height: 100vh;
+    height: 200vh;
     overflow: hidden;
+    touch-action: none;
 }
 
 .App-logo {
