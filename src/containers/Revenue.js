@@ -62,21 +62,7 @@ class Revenue extends Component {
             className = "arrow-button" /
             >
             <
-            /button>  <
-            Link activeClass = "active"
-            to = "next"
-            spy = { true }
-            smooth = { true }
-            hashSpy = { true }
-            offset = { 50 }
-            duration = { 100 }
-            delay = { 1000 }
-            isDynamic = { true }
-            onSetActive = { this.handleSetActive }
-            onSetInactive = { this.handleSetInactive }
-            ignoreCancelEvents = { false } >
-            Your name <
-            /Link> < /
+            /button>   < /
             form > <
             div className = "illustrations" >
             <
