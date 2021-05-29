@@ -41,7 +41,8 @@ class Choices extends Component {
 
     render() {
         return ( <
-            div className = "formbox" >
+            div className = "formbox"
+            id = "next" >
             <
             div className = "question" >
             <
