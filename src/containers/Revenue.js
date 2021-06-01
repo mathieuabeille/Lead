@@ -24,6 +24,13 @@ class Revenue extends Component {
     myChangeHandler = (event) => {
         this.setState({ amount: event.target.value });
     }
+    scrollUp() {
+        scroll.scrollMore(-700, {
+            delay: 100,
+            smooth: true,
+            ignoreCancelEvents: true,
+        });
+    }
 
     render() {
         return ( <
@@ -33,7 +40,10 @@ class Revenue extends Component {
             <
             h2 > Etape 1 < /h2> <
             h1 > Quels sont vos revenus nets par mois avant impôts ? < /h1> <
-            p > Pour identifier les meilleurs dispositifs < /p> <
+            p > Pour identifier les meilleurs dispositifs <
+            div className = "choice"
+            onClick = { this.scrollUp } > BACK < /div>< /p >
+            <
             br / >
             <
             div className = "input" >

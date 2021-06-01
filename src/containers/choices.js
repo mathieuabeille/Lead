@@ -37,7 +37,13 @@ class Choices extends Component {
 
         });
     }
-
+    scrollUp() {
+        scroll.scrollMore(-700, {
+            delay: 100,
+            smooth: true,
+            ignoreCancelEvents: true,
+        });
+    }
 
     render() {
         return ( <
@@ -49,6 +55,8 @@ class Choices extends Component {
             h2 > Etape 2 < /h2> <
             h1 > Quelle est votre situation ? < /h1> <
             p > Ceci nous aide à calculer votre montant d 'impôt</p> <
+            div className = "choice"
+            onClick = { this.scrollUp } > BACK < /div> <
             br / >
             <
             div className = "choices" > {

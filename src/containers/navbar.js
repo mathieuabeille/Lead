@@ -5,13 +5,8 @@ import { Link, NavLink } from 'react-router-dom';
 
 
 function NavBar() {
-
-
-
-
     return ( <
         div className = "navigation" >
-
         <
         div className = "logo-text" >
         <

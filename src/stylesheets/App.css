@@ -2,7 +2,6 @@
     text-align: center;
     background-color: white;
     width: 100vw;
-    min-height: -webkit-fill-available;
     touch-action: none;
 }
 

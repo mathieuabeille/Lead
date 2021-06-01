@@ -1,6 +1,6 @@
 .navigation {
     height: 10vh;
-    position: sticky;
+    position: fixed;
     top: 0px;
     background: white;
     display: flex;
