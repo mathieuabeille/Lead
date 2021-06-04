@@ -3,8 +3,16 @@ import '../stylesheets/form.css';
 import logo from '../assets/illustrations/family.svg';
 import right from '../assets/illustrations/right.png';
 import * as Scroll from 'react-scroll';
-import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
-
+import {
+    Link,
+    DirectLink,
+    Element,
+    Events,
+    scroll,
+    animateScroll,
+    scrollSpy,
+    scroller
+} from "react-scroll";
 
 class Choices extends Component {
     constructor(props) {
@@ -24,46 +32,43 @@ class Choices extends Component {
             title: "Veuf(ve)",
         }];
     }
+
     handleChange(event) { this.setState({ value: event.target.value }); }
     handleSubmit(event) {
         alert('Your favorite flavor is: ' + this.state.value);
         event.preventDefault();
     }
-    scrollToTop() {
-        scroll.scrollMore(700, {
-            delay: 100,
-            smooth: true,
-            ignoreCancelEvents: true,
 
-        });
-    }
-    scrollUp() {
-        scroll.scrollMore(-700, {
-            delay: 100,
-            smooth: true,
-            ignoreCancelEvents: true,
-        });
-    }
+
 
     render() {
+
         return ( <
-            div className = "formbox"
-            id = "next" >
+            div className = "formbox element"
+            id = "family" >
             <
             div className = "question" >
             <
             h2 > Etape 2 < /h2> <
             h1 > Quelle est votre situation ? < /h1> <
-            p > Ceci nous aide à calculer votre montant d 'impôt</p> <
-            div className = "choice"
-            onClick = { this.scrollUp } > BACK < /div> <
+            p > Ceci nous aide à calculer votre montant impôt < /p>  <
             br / >
             <
+            Link activeClass = "active"
+            to = "revenue"
+            spy = { true }
+            smooth = { true }
+            duration = { 500 } > Back <
+            /Link>  <
             div className = "choices" > {
                 this.situations.map((situation, index) => ( <
-                    div key = { index }
+                    Link key = { index }
                     className = "choice"
-                    onClick = { this.scrollToTop } >
+                    activeClass = "active"
+                    to = "revenue"
+                    spy = { true }
+                    smooth = { true }
+                    duration = { 500 } >
                     <
                     div > { situation.title } < /div> <
                     img src = { right }
@@ -71,7 +76,7 @@ class Choices extends Component {
                     className = "arrow" /
                     >
                     <
-                    /div>
+                    /Link>
                 ))
             } <
             /div> < /

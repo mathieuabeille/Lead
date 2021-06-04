@@ -1,15 +1,10 @@
 html,
 body {
     margin: 0;
-    overflow: hidden;
     background-color: #F7FAFC;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}
-
-body {
-    position: relative;
     overflow: hidden;
 }
 

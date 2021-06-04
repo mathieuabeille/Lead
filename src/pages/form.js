@@ -17,18 +17,9 @@ class Form extends Component {
             <
             NavBar / >
             <
-            div className = "formboxA" >
-            <
             Revenue / >
             <
             Choices / >
-            <
-            Revenue / >
-            <
-            Choices / >
-            <
-            /div>
-
             <
             ProgressBar / >
             <

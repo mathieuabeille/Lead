@@ -3,7 +3,16 @@ import '../stylesheets/form.css';
 import logo from '../assets/illustrations/family.svg';
 import right from '../assets/illustrations/right.png';
 import * as Scroll from 'react-scroll';
-import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import {
+    Link,
+    DirectLink,
+    Element,
+    Events,
+    scroll,
+    animateScroll,
+    scrollSpy,
+    scroller
+} from "react-scroll";
 import NumberFormat from 'react-number-format';
 
 
@@ -15,35 +24,23 @@ class Revenue extends Component {
     }
     mySubmitHandler = (event) => {
         event.preventDefault();
-        scroll.scrollMore(700, {
-            delay: 100,
-            smooth: true,
-            ignoreCancelEvents: true,
-        });
+        scroll.scrollToBottom();
     }
     myChangeHandler = (event) => {
         this.setState({ amount: event.target.value });
     }
-    scrollUp() {
-        scroll.scrollMore(-700, {
-            delay: 100,
-            smooth: true,
-            ignoreCancelEvents: true,
-        });
-    }
+
 
     render() {
         return ( <
-            div className = "formbox" >
+            div className = "formbox element"
+            id = "revenue" >
             <
             form onSubmit = { this.mySubmitHandler } >
             <
             h2 > Etape 1 < /h2> <
             h1 > Quels sont vos revenus nets par mois avant impôts ? < /h1> <
-            p > Pour identifier les meilleurs dispositifs <
-            div className = "choice"
-            onClick = { this.scrollUp } > BACK < /div>< /p >
-            <
+            p > Pour identifier les meilleurs dispositifs < /p > <
             br / >
             <
             div className = "input" >
@@ -58,21 +55,18 @@ class Revenue extends Component {
             <
             div className = "euro" > € < /div> < /
             div > <
-            br / >
-            <
-            button type = 'submit'
-            className = "btn-flat"
-            label = 'Continuer'
-            disabled = { this.state.amount < 1500 }
-
-            >
-            Continuer <
-            img src = { right }
-            alt = "right arrow"
-            className = "arrow-button" /
-            >
-            <
-            /button>   < /
+            br / > <
+            br / > {
+                this.state.amount < 1500 ? null :
+                    <
+                    Link activeClass = "active"
+                to = "family"
+                className = "btn-flat"
+                spy = { true }
+                smooth = { true }
+                duration = { 500 } > Continue < /Link >
+            } <
+            /
             form > <
             div className = "illustrations" >
             <
